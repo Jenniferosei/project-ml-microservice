@@ -25,18 +25,11 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ## Setup the Environment
 
-* Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
-```bash
-python3 -m pip install --user virtualenv
-# You should have Python 3.7 available in your host. 
-# Check the Python path using `which python3`
-# Use a command similar to this one:
-python3 -m virtualenv --python=<path-to-Python3.7> .devops
-source .devops/bin/activate
-```
-* Run `make install` to install the necessary dependencies
+Create a virtual env using python3 -m venv path
+Run make install in your terminal to install dependencies
+Run make lint to lint both python code and Dockerfile
 
-### Running `app.py`
+### Running Options
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
@@ -44,7 +37,9 @@ source .devops/bin/activate
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+Setup docker on your system
+Setup and Configure kubernetes
+Setup minikube
+Run ./run_docker.sh to build and prepare the image
+Install kubectl
+Run the pod using run_kubernetes.sh
